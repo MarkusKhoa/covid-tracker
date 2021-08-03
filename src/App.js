@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import { getCountry, getReportByCountry } from './apis/index'
 import CountrySelector from './components/CountrySelector'
 import Highlight from './components/HighlightChart/Highlight.jsx'
-import HighlightCard from './components/HighlightChart/HighlightCard.jsx'
 import Summary from './components/Summary'
 import {sortBy} from 'lodash';
 
