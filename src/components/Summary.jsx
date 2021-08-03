@@ -1,19 +1,19 @@
 import { Grid } from "@material-ui/core";
 import LineChart from "./Charts/LineChart";
-import HighMaps from "./Charts/HighMaps";
 import React from "react";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+// import HighMaps from "./Charts/HighMaps";
 
 function Summary({ report, selectedCountryId }) {
-  const [mapData, setMapData] = useState({});
+  // const [mapData, setMapData] = useState({});
 
-  useEffect(() => {
-    if (selectedCountryId) {
-      import(
-        `@highcharts/map-collection/countries/${selectedCountryId}/${selectedCountryId}-all.geo.json`
-      ).then((res) => setMapData(res));
-    }
-  });
+  // useEffect(() => {
+  //   if (selectedCountryId) {
+  //     import(
+  //       `@highcharts/map-collection/countries/${selectedCountryId}/${selectedCountryId}-all.geo.json`
+  //     ).then((res) => setMapData(res));
+  //   }
+  // });
 
   return (
     <>
