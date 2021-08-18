@@ -14,8 +14,13 @@ export default function Highlight({ report }) {
     },
     {
       title: "Total recovered",
-      count: data.Recovered,
+      count: data.Confirmed - data.Deaths - data.Active,
       type: "recovered",
+    },
+    {
+      title: "Active cases",
+      count: data.Active,
+      type: "active"
     },
     {
       title: "Total deaths",
@@ -26,7 +31,7 @@ export default function Highlight({ report }) {
   return (
     <Grid container spacing={4}>
       {summary.map((item) => (
-        <Grid item sm={4} xs={12}>
+        <Grid item sm={3} xs={12}>
           <HighlightCard
             title={item.title}
             count={item.count}

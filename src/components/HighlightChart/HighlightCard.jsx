@@ -6,7 +6,8 @@ const useStyles = makeStyles({
   wrapper: (props) => {
     if (props.type === "confirmed") return { border: "3px solid #f5ab2c" };
     if (props.type === "recovered") return { border: "3px solid #1eeb0c" };
-    else return { border: "3px solid #f70505" };
+    if (props.type === "active") return { border: "3px solid #20e8d7" };
+    else return { border: "3px solid #f70505" }; //props.type === "Death"
   },
   title: {
     fontSize: 15,
@@ -22,6 +23,7 @@ const customTitle = makeStyles({
   title: (text) => {
     if (text.title === "Total cases") return { color: "#f2c224" };
     if (text.title === "Total recovered") return { color: "#4caf50" };
+    if (text.title === "Active cases") return {color: "#20e8d7"};
     else return { color: "#d32f2f" };
   },
 });
